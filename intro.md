@@ -29,7 +29,7 @@ C:CREATE R:READ U:UPDATE D:DELETE
 2) To insert data into table
    query: INSERT INTO <table name> (id, name, city) VALUES (101,'Aditya','Banganga');
 3) To select data from table
-   query: SELECT \* FROM <table name>;
+   query: SELECT * FROM <table name>;
 4) To update data in table
    query: UPDATE <table name> SET name = 'Rahul' WHERE id = 101;
 5) To delete data from table

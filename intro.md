@@ -4,14 +4,14 @@ PostgreSQL is an open-source, advanced relational database management system (RD
 
 ## Section 1
 
-1. Creating database
-   query: CREATE DATABASE test;
-2. To list down all database
-   query: SELECT datname from pg_database;
-   or
-   shortcut: \l
-3. To change database
-   query: \c <db_name>;
+1. Creating database  
+   query: CREATE DATABASE test;  
+2. To list down all database  
+   query: SELECT datname from pg_database;  
+   or  
+   shortcut: \l  
+3. To change database  
+   query: \c <db_name>;  
 
 ## Section 2
 

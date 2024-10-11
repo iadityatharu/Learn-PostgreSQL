@@ -15,22 +15,22 @@ PostgreSQL is an open-source, advanced relational database management system (RD
 
 ## Section 2
 
-Table: A table is a collection of organized and related data in postgreSQL it is in row and columns format.
-CRUD:
-C:CREATE R:READ U:UPDATE D:DELETE
+Table: A table is a collection of organized and related data in postgreSQL it is in row and columns format.  
+CRUD:  
+C:CREATE R:READ U:UPDATE D:DELETE  
 
-1. To create table
+1. To create table    
    query: CREATE TABLE table_name (
    id INT,
    name VARCHAR(255),
    city VARCHAR(255)
-   );
+   );  
 
-2) To insert data into table
-   query: INSERT INTO table_name (id, name, city) VALUES (101,'Aditya','Banganga');
-3) To select data from table
-   query: SELECT * FROM table_name;
-4) To update data in table
-   query: UPDATE table_name SET name = 'Rahul' WHERE id = 101;
-5) To delete data from table
-   query: DELETE FROM table_name WHERE id = 101;
+2) To insert data into table  
+   query: INSERT INTO table_name (id, name, city) VALUES (101,'Aditya','Banganga');  
+3) To select data from table  
+   query: SELECT * FROM table_name;  
+4) To update data in table  
+   query: UPDATE table_name SET name = 'Rahul' WHERE id = 101;  
+5) To delete data from table  
+   query: DELETE FROM table_name WHERE id = 101;  

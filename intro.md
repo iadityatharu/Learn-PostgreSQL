@@ -141,6 +141,25 @@ SELECT * FROM employee WHERE NOT department = 'IT';
 also we can use not operator like this  
 SELECT * FROM employee WHERE department NOT IN ('IT','HR','Finance');   
 
+## DISTINCT clause :  
+It is used to return only unique (distinct) values, eliminating duplicate rows in the result set.  
+example: 
+it is useful for fetching like country ,city,department etc.  
+SELECT DISTINCT department from employee;  
+## ORDER BY clause :  
+It is used to sort the result set in ascending or descending order based on one or more columns.
+example:  
+SELECT * FROM employee id ORDER BY asc;  
+## LIMIT clause : 
+It is used to limit the number of rows returned in the result set.  
+example:  
+SELECT * FROM employee LIMIT 5;  
+## LIKE clause :  
+It is used to search for a specified pattern in a column.  
+example:  
+SELECT * FROM employee WHERE name LIKE '%John%';  
+
+
 
 
 

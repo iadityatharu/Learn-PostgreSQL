@@ -171,8 +171,11 @@ SELECT * FROM employee WHERE fname LIKE '%a';
 3. AVG (): It is used to calculate the average of a numeric column.  
 4. MAX (): It is used to find the maximum value in a column.  
 5. MIN (): It is used to find the minimum value in a column.  
-
-
+## IMPORTANT!  
+1. GROUP BY clause:  
+It is used to group the result set by one or more columns.  
+example:  
+SELECT department, AVG(salary) FROM employee GROUP BY department;  
 
 
 

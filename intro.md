@@ -92,14 +92,14 @@ hire_date.
 
 ### Solution:
 
-query:
-CREATE DATABASE bank;
-CREATE TABLE employee(
-emp_id SERIAL PRIMARY KEY,
-fname VARCHAR(255) NOT NULL,
-lname VARCHAR(255) NOT NULL,
-email VARCHAR(255) UNIQUE NOT NULL,
-department VARCHAR(255) NOT NULL,
-salary DECIMAL(10,2) DEFAULT 30000,
-hire_date DATE DEFAULT CURRENT_DATE
-);
+query:    
+CREATE DATABASE bank;   
+CREATE TABLE employee(    
+emp_id SERIAL PRIMARY KEY,  
+fname VARCHAR(255) NOT NULL,    
+lname VARCHAR(255) NOT NULL,   
+email VARCHAR(255) UNIQUE NOT NULL,  
+department VARCHAR(255) NOT NULL,    
+salary DECIMAL(10,2) DEFAULT 30000,    
+hire_date DATE DEFAULT CURRENT_DATE    
+);  

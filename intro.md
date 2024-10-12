@@ -33,4 +33,30 @@ C:CREATE R:READ U:UPDATE D:DELETE
 4) To update data in table  
    query: UPDATE table_name SET name = 'Rahul' WHERE id = 101;  
 5) To delete data from table  
-   query: DELETE FROM table_name WHERE id = 101;  
+   query: DELETE FROM table_name WHERE id = 101; 
+
+# Section 3: 
+
+# Drawback  
+Above operation are basic and working on one level but this is not enough for industry level database operation.  
+we have to apply schema level validation also to avoid unwanted data entry.  
+# Solution  
+We can use PostgreSQL's built-in features such as constraints, triggers, and views to implement schema-level.  
+We have to use it's built in datatypes and constraints to avoid unwanted data entry and improve  
+efficiency.  
+
+### Example  
+let's take an example to entry of one row and we don't want to entry nullish data in this situation  
+we can use built-constraints of postgreSQL 'NOT NULL' 
+
+### NOTE: Before we start building schema and model for table we have to learn about datatypes and   
+### constraints of PostgreSQL.
+### PostgreSQL Datatypes:
+### Most widely used datatypes are :
+1) Numeric: INT , DOUBLE, FLOAT, DECIMAL  
+2) String: VARCHAR  
+3) Boolean:BOOLEAN  
+4) Date: DATE  
+### constraints:  
+A constraints in postgreSQL is a rule applied to a column  
+### Most widely used constraints are :

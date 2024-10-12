@@ -157,7 +157,7 @@ SELECT * FROM employee LIMIT 5;
 ## LIKE clause :  
 It is used to search for a specified pattern in a column.  
 example:  
-SELECT * FROM employee WHERE name LIKE '%John%';  
+SELECT * FROM employee WHERE name LIKE '%A%';  
 
 
 

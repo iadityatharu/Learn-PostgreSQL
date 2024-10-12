@@ -60,3 +60,16 @@ we can use built-constraints of postgreSQL 'NOT NULL'
 ### constraints:  
 A constraints in postgreSQL is a rule applied to a column  
 ### Most widely used constraints are :
+1. NOT NULL Constraint  
+Ensures that a column cannot contain NULL values.  
+2. UNIQUE Constraint  
+Ensures that all values in a column are different.  
+3. PRIMARY KEY Constraint  
+Ensures that all values in a column are unique and not NULL.
+4. FOREIGN KEY Constraint  
+Establishes a relationship between two tables and ensures referential integrity by linking a column to the   primary key of another table.  
+5. DEFAULT Constraint  
+Assigns a default value to a column if no value is provided.   
+6. SERIAL Constraint  
+It can auto increment the number  
+

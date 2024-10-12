@@ -125,7 +125,21 @@ or pagination purposes.
 the WHERE clause to filter records that match the pattern, where % represents any sequence of characters,  
 and _ represents a single character.  
 
-
+## some useful operators in postgreSQL.  
+1. IN operator:  
+It is used to specify multiple values in a WHERE or FROM clause.    
+example:  
+SELECT * FROM employee WHERE department IN ('IT','HR','Finance');  
+2. BETWEEN operator:  
+It is used to specify a range of values in a WHERE or FROM clause.  
+example:  
+SELECT * FROM employee WHERE salary between 40000 AND 60000;  
+3. NOT operator:  
+It is used to negate the result of a condition.  
+example:  
+SELECT * FROM employee WHERE NOT department = 'IT';  
+also we can use not operator like this  
+SELECT * FROM employee WHERE department NOT IN ('IT','HR','Finance');   
 
 
 

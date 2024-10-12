@@ -103,3 +103,31 @@ department VARCHAR(255) NOT NULL,
 salary DECIMAL(10,2) DEFAULT 30000.00,    
 hire_date DATE DEFAULT CURRENT_DATE    
 );  
+#### Note insert data as your wish.  
+# Section 4: 
+## clause  
+clause are the keyword that are used while executing query.It is use to provide condition while fetching data.  
+### Most widely used clause are :
+1. WHERE clause:  
+It is used to filter records and return only those records that fulfill the specified condition.  
+It is commonly used in SQL queries to restrict the rows returned by a SELECT, UPDATE, DELETE,  
+or INSERT INTO statement based on one or more conditions.  
+2. DISTINCT clause: 
+It is used to return only unique (distinct) values, eliminating duplicate rows in the result set.  
+It is typically used with the SELECT statement to ensure that only non-repeating data is retrieved   
+from a column or set of columns.  
+3. ORDER BY clause :  
+It is used to sort the result set in ascending or descending order based on one or more columns.  
+4. LIMIT clause: It is used to limit the number of rows returned in the result set. It is typically used   
+with the SELECT statement to control how many records are displayed, often for performance optimization  
+or pagination purposes.  
+5. LIKE clause: It is used to search for a specified pattern in a column. It is commonly used with  
+the WHERE clause to filter records that match the pattern, where % represents any sequence of characters,  
+and _ represents a single character.  
+
+
+
+
+
+
+

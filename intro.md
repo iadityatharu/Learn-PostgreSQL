@@ -162,8 +162,15 @@ SELECT * FROM employee WHERE fname LIKE '%a%';
 finding fanme who contain first letter A in them  
 SELECT * FROM employee WHERE fname LIKE 'A%';  
 finding fname who contain last letter a in them   
-SELECT * FROM employee WHERE fname LIKE '%a';
+SELECT * FROM employee WHERE fname LIKE '%a';  
 
+# Section 5:  
+## postgreSQL Calculation:  
+1. COUNT (): It is used to count total number of column.  
+2. SUM (): It is used to calculate the total of a numeric column. 
+3. AVG (): It is used to calculate the average of a numeric column.  
+4. MAX (): It is used to find the maximum value in a column.  
+5. MIN (): It is used to find the minimum value in a column.  
 
 
 

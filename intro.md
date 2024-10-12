@@ -125,7 +125,7 @@ or pagination purposes.
 the WHERE clause to filter records that match the pattern, where % represents any sequence of characters,  
 and _ represents a single character.  
 
-## some useful operators in postgreSQL.  
+## some useful operators in postgreSQL. It is also example of WHERE clause    
 1. IN operator:  
 It is used to specify multiple values in a WHERE or FROM clause.    
 example:  

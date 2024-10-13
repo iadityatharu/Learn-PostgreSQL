@@ -262,3 +262,10 @@ select position(fname IN 'aditya') from employee where id=1;
 2. Get the output like this.  
 I1 Raj (1st letter of department with id and fname)  
 
+
+## Solution of TASK 1:  
+1. SELECT CONCAT_WS(':',id,fname,lname,department) FROM employee;  
+2. SELECT CONCAT_WS(':',id,CONCAT_WS(' ',fname,lname),department,salary) FROM employee;  
+## Solution of TASK 2:  
+1. SELECT CONCAT_WS(':',id,fname,UPPER(department)) FROM employee WHERE fname='Raj';  
+2. SELECT CONCAT_WS(' ',CONCAT(LEFT(fname,1),id),fname) FROM employee;  

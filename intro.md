@@ -204,7 +204,7 @@ SELECT \* FROM employee WHERE fname LIKE '%a';
    example:  
    SELECT concat(fname,' ',lname) FROM employee;
 
-### Note: Al we can use name alias for our customized name of column.
+### Note: we can use name alias for our customized name of column.
 
 example:  
 SELECT concat(fname,' ',lname) AS full_name FROM employee;  

@@ -250,3 +250,8 @@ This is used to find the position of some word in string.
 example:  
 select position(fname IN 'aditya') from employee where id=1;  
 
+## TASK 1:    
+1. Get the output like this.  
+1:Raj:sharma:IT(id,fname,lname,department)  
+2. Get the output like this.  
+1:Raj sharma:IT,50000 (id,fname,lname,department,salary)  

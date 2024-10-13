@@ -269,3 +269,29 @@ I1 Raj (1st letter of department with id and fname)
 ## Solution of TASK 2:  
 1. SELECT CONCAT_WS(':',id,fname,UPPER(department)) FROM employee WHERE fname='Raj';  
 2. SELECT CONCAT_WS(' ',CONCAT(LEFT(fname,1),id),fname) FROM employee;  
+
+## Exercise 1:  
+1. Find different type of department in database.  
+=> SELECT DISTINCT dept FROM employee;  
+2. Display record with high-low salary.  
+=> SELECT * FROM employee ORDER BY salary DESC;  
+3. How to see only top 3 records from a table?  
+=> SELECT * FROM employee LIMIT 3;  
+4. Show the records where first name start with letter 'A'.  
+=> SELECT * FROM employee WHERE fname LIKE 'A%';  
+5. Show the record where length of last name is 4 character.  
+=> SELECT * FROM employee WHERE  length(lname)=4;  
+## Exercise 2:  
+1. Find total no.of employee in database.  
+=> SELECT COUNT(id) FROM employee;  
+2. Find the no. of employee in each department.  
+=> SELECT department,COUNT(id) from employee GROUP BY dept;  
+3. Find lowest salary paying.   
+=> SELECT * FROM employee WHERE salary=(SELECT MIN(salary) FROM employee);  
+4. Find highest salary paying.  
+=> SELECT * FROM employee WHERE salary=(SELECT MAX(salary) FROM employee);  
+5. Find total salary paying in IT department.  
+=> SELECT SUM(salary) FROM employee WHERE department='IT';  
+6. Average salary paying in each department.  
+=> SELECT department,AVG(salary) FROM employee GROUP BY department;  
+

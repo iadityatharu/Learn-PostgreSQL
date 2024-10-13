@@ -255,3 +255,10 @@ select position(fname IN 'aditya') from employee where id=1;
 1:Raj:sharma:IT(id,fname,lname,department)  
 2. Get the output like this.  
 1:Raj sharma:IT,50000 (id,fname,lname,department,salary)  
+
+## TASK 2:  
+1. Get the output like this.  
+4:Suman:FINANCE(id,fname,department in uppercase)  
+2. Get the output like this.  
+I1 Raj (1st letter of department with id and fname)  
+

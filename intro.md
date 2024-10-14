@@ -342,6 +342,28 @@ CREAT TABLE contact(
    constraint  phone_no_less_than_10digits CHECK(LENGTH(phone)>=10)  
 );  
 
+## CASE expression:  
+In PostgreSQL, a CASE expression is used to execute conditional logic in SQL queries. It allows you to  
+return different values based on specific conditions, similar to an if-else structure in programming.   
+The CASE expression can be used in SELECT, UPDATE, INSERT, or WHERE clauses to control query results   
+based on conditional checks.  
+
+syntax:  
+CASE  
+    WHEN condition_1 THEN result_1  
+    WHEN condition_2 THEN result_2  
+    ...  
+    ELSE result_n  
+END  
+example:    
+SELECT name, salary,  
+    CASE  
+        WHEN salary > 5000 THEN 'High'  
+        WHEN salary BETWEEN 3000 AND 5000 THEN 'Medium'  
+        ELSE 'Low'  
+    END AS salary_category  
+FROM employees;  
+
 
 
 

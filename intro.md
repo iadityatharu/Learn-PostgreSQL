@@ -295,3 +295,29 @@ I1 Raj (1st letter of department with id and fname)
 6. Average salary paying in each department.  
 => SELECT department,AVG(salary) FROM employee GROUP BY department;  
 
+# Section 7 :  
+## ALTER QUERY:  
+=> ALTER QUERY is used to manipulate table directly like add or deleting column ,updating column name and datatype etc.  
+
+Let's create a new table called detail.  
+query:  
+CREATE TABLE detail (  
+   id SERIAL PRIMARY KEY,  
+   fname VARCHAR(100) NOT NULL,  
+   lname VARCHAR(100) NOT NULL,  
+);  
+
+1. Add column:  
+query: ALTER TABLE detail ADD COLUMN age INT NOT NULL DEFAULT 0;  
+2. Remove column:  
+query: ALTER TABLE detail DROP COLUMN age;  
+3. Rename column:  
+query: ALTER TABLE detail RENAME COLUMN fname TO first_name;  
+4. Rename table:  
+query: ALTER TABLE detail RENAME TO employee_detail;  
+5. Change data type:  
+query: ALTER TABLE detail ALTER COLUMN fname SET DATA TYPE VARCHAR(200);  
+
+
+
+

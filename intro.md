@@ -301,7 +301,7 @@ I1 Raj (1st letter of department with id and fname)
 
 Let's create a new table called detail.  
 query:  
-CREATE TABLE detail (  
+CREATE TABLE detail (    
    id SERIAL PRIMARY KEY,  
    fname VARCHAR(100) NOT NULL,  
    lname VARCHAR(100) NOT NULL,  
@@ -317,6 +317,30 @@ query: ALTER TABLE detail RENAME COLUMN fname TO first_name;
 query: ALTER TABLE detail RENAME TO employee_detail;  
 5. Change data type:  
 query: ALTER TABLE detail ALTER COLUMN fname SET DATA TYPE VARCHAR(200);  
+
+## CHECK Constraint:  
+A CHECK constraint in PostgreSQL is used to enforce a condition on the values in a column or across  
+multiple columns. It ensures that the data entered into a column meets specific criteria, and if the   condition is not met, the database rejects the data.  
+example:  
+CREATE TABLE  contact(  
+   name VARCHAR(100),  
+   phone VARCHAR(13) UNIQUE CHECK(LENGTH(phone)>=10)
+);  
+1. Add constraint:  
+It is possible to add constraint after table is created.  
+example:  
+ALTER TABLE contact ADD CONSTRAINT chk_phone CHECK(LENGTH(phone)>=10);     
+2. Drop constraint:  
+It is possible to drop constraint after table is created.  
+example:  
+ALTER TABLE contact DROP CONSTRAINT chk_phone;  
+3. Named constraint:  
+It is possible to create name constraint which help in tracking error while using database.  
+CREAT TABLE contact(  
+   name VARCHAR(100),  
+   phone VARCHAR(13) UNIQUE,  
+   constraint  phone_no_less_than_10digits CHECK(LENGTH(phone)>=10)  
+);  
 
 
 

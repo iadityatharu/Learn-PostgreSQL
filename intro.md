@@ -458,7 +458,27 @@ syntax:
 SELECT column1, column2, aggregate_function(column3)  
 FROM table_name  
 GROUP BY ROLLUP (column1, column2);  
-  
+
+# Stores Procedure:  
+1. Stored Routine  
+2. User defined function  
+
+# Stored Routine:  
+Stored Routine is a SQL code that can be stored in the database and can be executed multiple times.  
+SET of SQL statement and procedural logic that can perform operation such as inserting,updating,deleting  
+and querying data.  
+example:  
+CREATE OR REPALCE PROCEDURE update_emp_salary(p_employee_id INT,p_new_salary INT)  
+LANGUAGE PLPGSQL  
+AS $$  
+BEGIN  
+UPDATE employee SET salary = p_new_salary WHERE employee_id = p_employee_id;  
+END;  
+$$;  
+
+Now execute query once . after executing the query we can call the procedure any time like a function.  
+for calling  :
+CALL update_emp_salary(1,10000);
 
 
 

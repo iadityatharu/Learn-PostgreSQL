@@ -479,6 +479,24 @@ $$;
 Now execute query once . after executing the query we can call the procedure any time like a function.  
 for calling  :
 CALL update_emp_salary(1,10000);
+# User defined function:  
+User defined function is a function that is created by the user to perform a specific task.  
+Custom function created by the user to perform specific operations and return a value.  
+
+syntax:  
+CREATE OR REPALCE FUNCTION function_name(parameters)  
+RETURNS return_type as $$  
+BEGIN  
+//BODY OF FUNCTION
+return some_value  
+END;  
+$$ LANGUAGE PLPGSQL;  
+
+
+
+
+
+
 
 
 

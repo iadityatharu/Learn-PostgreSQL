@@ -363,6 +363,61 @@ SELECT name, salary,
         ELSE 'Low'  
     END AS salary_category  
 FROM employees;  
+# Section 8:  
+A relationship refers to the association or connection between two or more tables. Relationships are  
+typically established using foreign keys, which link one table's column (or columns) to the primary key  
+of another table.  
+## Types of Relationships:  
+1. One to one  
+2. One to many  
+3. Many to many  
+These are most used relationship in postgreSQL.  
+
+# Before Learning these relationship Let's create a table with maintaining relationship:  
+
+CREATE TABLE customer(  
+   customer_id SERIAL PRIMARY KEY,  
+   name VARCHAR(100),  
+);  
+CREATE TABLE orders(  
+   order_id SERIAL PRIMARY KEY,  
+   order_date DATE DEFAULT CURRENT_DATE,  
+   price INT NOT NULL,  
+   customer_id INTEGER,  
+   FOREIGN KEY (customer_id) REFERENCES customer(customer_id)  
+);  
+
+### Now we are able to perform operation in this both table. Here comes the concept of JOINs for manipulate  
+### the relationship maintained in both table.  
+#### JOIN 
+=> JOIN operation is used to combine rows from two or more table based on a related column between them.  
+#### Types of JOINs:  
+1. CROSS JOIN   
+=> Every row from one table is combined with every row from another table.  
+example:    
+SELECT * FROM customer CROSS JOIN orders;   
+
+2. INNER JOIN   
+=> Returns only the rows where there is a match between the specified columns in both the left(or first ) and   
+right ( or second) table.  
+example:  
+SELECT * FROM employee as c INNER JOIN orders as o on c.customer_id=o.customer_id; 
+
+INNER JOIN with GROUP BY:    
+SELECT name FROM customer INNER JOIN orders ON orders.customer_id=customer.customer_id GROUP BY name;  
+
+
+3. LEFT JOIN  
+Returns all row from the left (or first) table and the matching rows from the right (or second ) table.  
+example:  
+SELECT * FROM customer LEFT JOIN orders ON orders.customer_id=customer.customer_id;  
+
+4. RIGHT JOIN  
+Returns all rows from the right ( on second ) table and matching rows from left (or first ) table.  
+example:  
+SELECT * FROM customer  c RIGHT JOIN orders o ON c.customer_id=o.customer_id;  
+
+
 
 
 

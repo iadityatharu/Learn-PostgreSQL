@@ -417,6 +417,49 @@ Returns all rows from the right ( on second ) table and matching rows from left 
 example:  
 SELECT * FROM customer  c RIGHT JOIN orders o ON c.customer_id=o.customer_id;  
 
+# Views  
+In PostgreSQL, a view is a virtual table that is based on the result set of an SQL query. It doesn't  
+store data itself but provides a way to simplify complex queries by storing a SQL query as an object   
+in the database. You can query a view as if it were a table.  
+
+example: 
+CREATE VIEW student_courses AS  
+SELECT      
+    s.s_name,   
+    c.c_name,   
+    e.enrolled_date   
+FROM    
+    enrollment AS e   
+JOIN    
+    student AS s ON e.s_id = s.s_id   
+JOIN    
+    course AS c ON e.c_id = c.c_id;   
+
+Now postgreSQL create a temprory table so that we can use simple query :  
+
+SELECT * FROM student_courses;  
+note: It gives same data and also we can perform different operation in this views table example using GROUP  
+BY clause.  
+
+
+# HAVING clause:  
+This clause is used to apply condition on query like WHERE clause but we can use HAVING if we used  
+GROUP BY in our query cause WHERE clause is not work in GROUP BY clause.  
+example:  
+SELECT customer_id, COUNT(order_id) AS total_orders   
+FROM orders   
+GROUP BY customer_id   
+HAVING COUNT(order_id) > 1;   
+
+# GROUP BY ROLLUP:  
+The GROUP BY ROLLUP clause in PostgreSQL is used to generate subtotals and grand totals for aggregated data.  
+It is an extension of the GROUP BY clause that allows for hierarchical or multi-level aggregations.  
+syntax:  
+SELECT column1, column2, aggregate_function(column3)  
+FROM table_name  
+GROUP BY ROLLUP (column1, column2);  
+  
+
 
 
 
